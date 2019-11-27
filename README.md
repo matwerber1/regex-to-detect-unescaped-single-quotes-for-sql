@@ -8,9 +8,9 @@ Put another way, this will match an entire string if, anywhere within the string
 
 This was provided by a colleague and regex wizard, Nicolas Moutschen. Big thanks to Nicolas, my regex skills are not as savvy :)
 
-'''
+```
 ^.*(?<!')'('')*(?!').*$
-'''
+```
 
 ## Examples
 
