@@ -1,10 +1,8 @@
 # Purpose
 
-Provide a regex pattern that will match an entire string if, anywhere within the string, it contains an unescaped single quote. 
+Provide a regex pattern that will match an entire string if, anywhere within the string, it contains an unescaped single quote. An "escaped single quote" is defined as two consecutive quotes. This regex is used to help detect malformed inputs, aka input sanitization, for MySQL queries.
 
-An "escaped single quote" is defined as two consecutive quotes. 
-
-This regex is used to help detect malformed inputs, aka input sanitization, for MySQL queries.
+Put another way, this will match an entire string if, anywhere within the string, there is an odd number (1, 3, 5, etc) of adjacent single quotes. 
 
 ## Regex
 
