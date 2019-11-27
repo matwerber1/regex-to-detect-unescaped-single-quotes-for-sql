@@ -37,3 +37,13 @@ This should match the entire string from any of these examples:
   ```
   This matches if, anywhere within the string, there is ' an odd number of ''''' quotes
   ```
+
+# AppSync Resolver Example
+
+```
+#set($myInputIsValid = !($util.matches("^.*(?<!')'('')*(?!').*$",$ctx.args.myInput)))
+
+#if (!$myInputIsValid)
+    $util.error("Input contains unescaped quote.")
+#end
+```
